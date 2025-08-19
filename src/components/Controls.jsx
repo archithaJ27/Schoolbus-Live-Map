@@ -4,13 +4,12 @@ export default function Controls({ isPlaying, onPlay, onPause, onReset, speed, o
   return (
     <div style={{ margin: '10px', textAlign: 'center' }}>
       {!isPlaying ? (
-        <button onClick={onPlay} style={buttonStyle}>Play</button>
+        <button style={btnStyle} onClick={onPlay}>Play</button>
       ) : (
-        <button onClick={onPause} style={buttonStyle}>Pause</button>
+        <button style={btnStyle} onClick={onPause}>Pause</button>
       )}
-      <button onClick={onReset} style={buttonStyle}>Reset</button>
-
-      <label style={{ marginLeft: 20, color: '#1240ab', fontWeight: 'bold' }}>
+      <button style={btnStyle} onClick={onReset}>Reset</button>
+      <label style={{ marginLeft: 15, color: '#1240ab', fontWeight: 'bold' }}>
         Speed:
         <select
           value={speed}
@@ -26,14 +25,14 @@ export default function Controls({ isPlaying, onPlay, onPause, onReset, speed, o
   );
 }
 
-const buttonStyle = {
+const btnStyle = {
   backgroundColor: '#1240ab',
   color: 'white',
   fontWeight: 'bold',
-  padding: '8px 12px',
+  padding: '8px 14px',
   marginRight: 10,
   border: 'none',
-  borderRadius: '5px',
+  borderRadius: 5,
   cursor: 'pointer',
 };
 
